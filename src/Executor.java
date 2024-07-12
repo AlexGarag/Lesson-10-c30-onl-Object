@@ -5,10 +5,9 @@ public class Executor {
         System.out.println();
 
         User userA = new User("John", "Doe");
-//        User userB = new User("Jane", "Doe");
+//        делаю клон userA
         User userCloneA = userA.clone();
-//        User userCloneB = userB.clone();
-
+// проверяю - создан ли клон?
         if ((userCloneA.equals(userA) && userCloneA.hashCode() != userA.hashCode()) &&
                 (userCloneA.getEmailUser().equals(userA.getEmailUser()) && userCloneA.getEmailUser().hashCode() != userA.getEmailUser().hashCode())) {
             System.out.println("Cloned userA");
