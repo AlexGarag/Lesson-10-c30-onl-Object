@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class User {
     private final String ID_USER;
-    protected String name;
-    protected String family;
-    EmailUser emailUser;
+    private String name;
+    private String family;
+    private EmailUser emailUser;
 
     public User(User user) {
         ID_USER = user.getID();
@@ -27,7 +27,9 @@ public class User {
         return "User " + "\t" +
                 "id: '" + ID_USER + '\'' + "\t" + "\t" +
                 "name: '" + name + '\'' + "\t" + "\t" +
-                "family: '" + family + '\'';
+                "family: '" + family + '\'' + "\t" + "\t" +
+                "hash: '" + this.hashCode() + '\'' + "\t" + "\t" +
+                "loginEmailUser: '" + emailUser.getLoginUser() + '\'';
     }
 
     @Override
@@ -60,8 +62,12 @@ public class User {
         return ID_USER;
     }
 
-    public EmailUser getEmail() {
+    public EmailUser getEmailUser() {
         return emailUser;
+    }
+
+    public void getName(String newName) {
+        name = newName;
     }
 
     @Override

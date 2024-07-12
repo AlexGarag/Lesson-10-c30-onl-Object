@@ -14,7 +14,7 @@ public class EmailUser {
         this.E_MAIL = user.getName() + "." + user.getFamily() + "@" + "company.com";
         this.hashPassword = String.valueOf(user.getName().concat(user.getFamily()).hashCode());
 //        System.out.println(this);
-//        System.out.println();
+//        System.out.println
     }
 
     @Override
@@ -57,5 +57,9 @@ public class EmailUser {
 
     public String getHashPassword() {
         return hashPassword;
+    }
+    public void setLoginUser(String loginUser) {
+        this.loginUser = loginUser;
+//        System.out.printf(this.loginUser);
     }
 }
