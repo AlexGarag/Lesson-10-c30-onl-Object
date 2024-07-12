@@ -10,7 +10,7 @@ public class User {
 
     public User(User user) {
         ID_USER = user.getID();
-        name = user.getName();
+        name = user.setName();
         family = user.getFamily();
         emailUser = new EmailUser(user);
     }
@@ -50,7 +50,7 @@ public class User {
 //        return result;
 //    }
 
-    public String getName() {
+    public String setName() {
         return name;
     }
 
@@ -66,7 +66,7 @@ public class User {
         return emailUser;
     }
 
-    public void getName(String newName) {
+    public void setName(String newName) {
         name = newName;
     }
 

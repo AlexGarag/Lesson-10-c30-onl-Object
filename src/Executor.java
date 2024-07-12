@@ -13,7 +13,7 @@ public class Executor {
             System.out.println("Cloned userA");
         }
 // тестирую: меняю аргументы у клона (включая его вложенные объекты - email)
-        userCloneA.getName("David");
+        userCloneA.setName("David");
         userCloneA.getEmailUser().setLoginUser("222222");
 //  и контролирую, чтобы не менялись аргументы "исходника"
         System.out.println(userA);

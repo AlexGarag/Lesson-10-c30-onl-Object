@@ -10,9 +10,9 @@ public class EmailUser {
 
     public EmailUser(User user) {
         this.ID_USER = user.getID();
-        this.loginUser = user.getName().concat(user.getFamily());
-        this.E_MAIL = user.getName() + "." + user.getFamily() + "@" + "company.com";
-        this.hashPassword = String.valueOf(user.getName().concat(user.getFamily()).hashCode());
+        this.loginUser = user.setName().concat(user.getFamily());
+        this.E_MAIL = user.setName() + "." + user.getFamily() + "@" + "company.com";
+        this.hashPassword = String.valueOf(user.setName().concat(user.getFamily()).hashCode());
 //        System.out.println(this);
 //        System.out.println
     }
